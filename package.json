@@ -1,0 +1,23 @@
+{
+  "name": "clubspark-auto-bookings",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Utility to automatically book venue sessions in ClubSpark.",
+  "scripts": {
+    "local": "npx run-func index.js handler",
+    "compress": "zip -r function.zip .",
+    "deploy": "npm run compress & aws lambda update-function-code --function-name clubspark-auto-bookings --zip-file fileb://function.zip",
+    "set-env": "aws lambda update-function-configuration --function-name clubspark-auto-bookings --environment Variables=\"{ACCOUNT_1_EMAIL=loremipsum@email.com, ACCOUNT_1_PASS=123456789a, ACCOUNT_2_EMAIL=loremipsum2@email.com, ACCOUNT_2_PASS=123456789a}\""
+  },
+  "author": "Marcel Pallares",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "axios-cookiejar-support": "^1.0.1",
+    "cheerio": "*",
+    "dateformat": "^4.5.1",
+    "luxon": "^1.26.0",
+    "querystring": "^0.2.1",
+    "tough-cookie": "^2.5.0"
+  }
+}
