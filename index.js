@@ -13,9 +13,9 @@ const account_2_pass = process.env.ACCOUNT_2_PASS;
 // to capture the venue settings data, we need to assume the intervals for each slot.
 const interval = 1;
 
-const start = 18;
+const start = 17.5;
 const start2 = start + interval;
-const end = 20;
+const end = 19.5;
 
 module.exports.handler = async function (_event, _context, _cb) {
   // Run all 2 bookings in parallel
