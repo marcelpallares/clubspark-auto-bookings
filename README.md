@@ -20,9 +20,8 @@ Finally **automate the execution** using a trigger like **Amazon EventrBridge** 
 
 ## Environment variables
 
-| Variable          | Description                 |
-| ----------------- | --------------------------- |
-| ACCOUNT_1_EMAIL   | Email for the account 1.    |
-| ACCOUNT_1_PASS    | Password for the account 1  |
-| ACCOUNT_2_EMAIL   | Email for the account 2.    |
-| ACCOUNT_2_PASS    | Password for the account 2  |
+| Variable          | Description                  |
+| ----------------- | ---------------------------- |
+| ACCOUNT_EMAIL     | Email for the account.       |
+| ACCOUNT_PASS      | Password for the account.    |
+| VENUE             | Venue where you want to book.|
