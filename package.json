@@ -7,7 +7,7 @@
     "local": "npx run-func index.js handler",
     "compress": "zip -r function.zip .",
     "deploy": "npm run compress & aws lambda update-function-code --function-name clubspark-auto-bookings --zip-file fileb://function.zip",
-    "set-env": "aws lambda update-function-configuration --function-name clubspark-auto-bookings --environment Variables=\"{ACCOUNT_1_EMAIL=loremipsum@email.com, ACCOUNT_1_PASS=123456789a, ACCOUNT_2_EMAIL=loremipsum2@email.com, ACCOUNT_2_PASS=123456789a}\""
+    "set-env": "aws lambda update-function-configuration --function-name clubspark-auto-bookings --environment Variables=\"{ACCOUNT_EMAIL=loremipsum@email.com, ACCOUNT_PASS=123456789a, VENUE=SouthwarkPark, START_TIME=17.5, END_TIME=19.5}\""
   },
   "author": "Marcel Pallares",
   "license": "ISC",

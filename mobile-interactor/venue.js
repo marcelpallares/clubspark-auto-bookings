@@ -62,7 +62,7 @@ module.exports.getSessions = async (config) => {
 module.exports.waitIfNeeded = async (config, settings) => {
   const serverDate = settings.ServerDateTime;
   const timeToBook = settings.NewDayBookingAvailabilityTime;
-  const secondsOffset = 1; //Add a X seconds offset to make sure the server is ready
+  const secondsOffset = 0; //Add a X seconds offset to make sure the server is ready
   const daysInAdvanceToBook = settings.Roles[0].AdvancedBookingPeriod;
 
   const currentDate = DateTime.fromISO(serverDate, { zone: "utc" });
